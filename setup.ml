@@ -5818,11 +5818,7 @@ let setup_t =
                       bs_install = [(OASISExpr.EBool true, true)];
                       bs_path = "lib";
                       bs_compiled_object = Best;
-                      bs_build_depends =
-                        [
-                           FindlibPackage ("cstruct", None);
-                           FindlibPackage ("re.str", None)
-                        ];
+                      bs_build_depends = [FindlibPackage ("cstruct", None)];
                       bs_build_tools = [ExternalTool "ocamlbuild"];
                       bs_c_sources = [];
                       bs_data_files = [];
