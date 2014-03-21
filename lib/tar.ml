@@ -49,21 +49,6 @@ module String = struct
     List.rev (List.map implode (alternate [] true (explode str)))
 end
 
-let rec really_read fd string off n =
-  if n=0 then () else
-    let m = Unix.read fd string off n in
-    if m = 0 then raise End_of_file;
-    really_read fd string (off+m) (n-m)
-
-let finally fct clean_f =
-  let result =
-    try fct ();
-    with exn ->
-      clean_f ();
-      raise exn in
-  clean_f ();
-  result
-
 (** Process and create tar file headers *)
 module Header = struct
   (** Map of field name -> (start offset, length) taken from wikipedia:
