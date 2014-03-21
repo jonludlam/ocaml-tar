@@ -13,7 +13,7 @@ Library tar
   Path:               lib
   BuildTools:         ocamlbuild
   Modules:            Tar
-  BuildDepends:       cstruct, re.str
+  BuildDepends:       cstruct
   Findlibname:        tar
 
 Library tar_unix

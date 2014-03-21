@@ -2,7 +2,7 @@
 # DO NOT EDIT (digest: a56356394b6450a127261d2f08df1326)
 version = "0.2"
 description = "Pure OCaml library to read and write tar files"
-requires = "cstruct re.str"
+requires = "cstruct"
 archive(byte) = "tar.cma"
 archive(byte, plugin) = "tar.cma"
 archive(native) = "tar.cmxa"
